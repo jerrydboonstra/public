@@ -1,5 +1,7 @@
 # How to securely connect to a remote Tomcat 6 server with JMX
 
+This has been tested on Amazon Elastic Beanstalk, as of May 2011.
+
 This was difficult to figure out.
 
 ## Preparation
