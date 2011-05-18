@@ -15,7 +15,7 @@ This was difficult to figure out.
 
 ### Prepare jmxremote.password
 
-1. Create file `jmxremote.password`, containing
+1. Create file `jmxremote.password`, containing username and passwords, something like:
 
         observer dov2ov8at4ic2yi
         admin liv7ti2ows2ab5n
