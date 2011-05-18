@@ -15,8 +15,8 @@ This was difficult to figure out.
 
 1. Create file `jmxremote.password`, containing
 
-        observer passw0rd
-        admin 2H7vrogEwC
+        observer dov2ov8at4ic2yi
+        admin liv7ti2ows2ab5n
 
 ## Tomcat server setup
 
