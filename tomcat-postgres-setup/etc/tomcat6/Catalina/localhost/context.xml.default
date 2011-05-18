@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://tomcat.apache.org/tomcat-6.0-doc/config/context.html -->
+<!-- asserting swallowOutput means the bytes output to System.out and System.err
+	by the web application will be redirected to the web application logger -->
+<Context antiResourceLocking="false" clearReferencesStopTimerThreads="true"
+    swallowOutput="true" workDir="/tmp/myapp">
+
+	<!-- Remote IP Valve -->
+	<!-- replaces the apparent client remote IP address and hostname for the
+		request with the IP address list presented by a proxy or a load balancer
+		via a request headers (e.g. "X-Forwarded-For") -->
+	<Valve className="org.apache.catalina.valves.RemoteIpValve" />
+
+	<!-- Log in apache access log format -->
+	<Valve className="org.apache.catalina.valves.AccessLogValve"
+		directory="/Logs/myapp" prefix="myapp_access_log." suffix=".txt"
+		pattern="common" resolveHosts="false" rotatable="true" buffered="true" />
+
+	<!-- Black-list or White-list a set of IPs with this <Valve className="org.apache.catalina.valves.RemoteHostValve"
+    		allow="*.mycompany.com,www.yourcompany.com"/> <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+    		deny="192.168.1.*" /> -->
+
+        <!--  Postgres JDBC driver jar must be in Tomcat appbase /lib for this to work -->
+	<Resource name="jdbc/stuff" auth="Container" type="javax.sql.DataSource"
+		maxActive="8" maxIdle="4" username="user" password="pass"
+		driverClassName="org.postgis.DriverWrapper" dialect="org.hibernatespatial.postgis.PostgisDialect"
+		url="jdbc:postgresql://127.0.0.1/mydb" />
+
+	<!-- Disable peristance of sessions across appserver restarts -->
+	<Manager className="org.apache.catalina.session.StandardManager" pathname="" />
+</Context>
