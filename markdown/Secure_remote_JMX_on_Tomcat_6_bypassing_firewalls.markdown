@@ -40,7 +40,7 @@ This was difficult to figure out.
             -Dcom.sun.management.jmxremote.password.file=/etc/tomcat6/jmxremote.password \
             -Dcom.sun.management.jmxremote.access.file=/etc/tomcat6/jmxremote.access"
 
-`Djava.rmi.server.hostname=localhost` is necessary so the RMI registry lookups give out addresses
+`-Djava.rmi.server.hostname=localhost` is necessary so the RMI registry lookups give out addresses
 on localhost on the server, otherwise it will give out public addresses blocked by the firewall.
 
 #### Add to server.xml
