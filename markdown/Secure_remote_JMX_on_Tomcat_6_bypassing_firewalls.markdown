@@ -26,7 +26,7 @@ This was difficult to figure out.
 
 1. copy jmxremote.access and jmxremote.password to `/etc/tomcat6/.`
 1. __important__ Set permissions on `/etc/tomcat6/jmxremote.password` to 600
-1. Acquire `catalina-jmx-remote.jar`, which is required by Tomcat.  I found it [here]: http://apache.opensourceresources.org/tomcat/tomcat-6/v6.0.32/bin/extras/
+1. Acquire `catalina-jmx-remote.jar`, which is required by Tomcat.  I found it here: http://apache.opensourceresources.org/tomcat/tomcat-6/v6.0.32/bin/extras/
 
 ### Change Tomcat configuration
 
