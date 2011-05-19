@@ -25,9 +25,9 @@ chmod 644 $TOMCAT_LIB/postgis-jdbc-1.5.2.jar $TOMCAT_LIB/postgis-jdbc-jts-1.1.6.
 cp ./etc/tomcat6/Catalina/localhost/context.xml.default $TOMCAT_CONTEXT_DIR/.
 cp ./etc/tomcat6/tomcat-users.xml $TOMCAT_ETC/.
 cp ./etc/tomcat6/jmxremote.access $TOMCAT_ETC/.
-cp ./etc/tomcat6/jmxremote.keystore $TOMCAT_ETC/.
+#cp ./etc/tomcat6/jmxremote.keystore $TOMCAT_ETC/.
 cp ./etc/tomcat6/jmxremote.password $TOMCAT_ETC/.
-cp ./etc/tomcat6/stuff-config.groovy $TOMCAT_ETC/.
+#cp ./etc/tomcat6/myapp-config.groovy $TOMCAT_ETC/.
 cp ./etc/tomcat6/tomcat6.conf $TOMCAT_ETC/.
 cp ./etc/tomcat6/server.xml $TOMCAT_ETC/.
 
@@ -36,8 +36,8 @@ chown tomcat $TOMCAT_ETC/tomcat-users.xml
 chmod 640 $TOMCAT_ETC/tomcat-users.xml 
 chown tomcat $TOMCAT_ETC/jmxremote.access
 chmod 640 $TOMCAT_ETC/jmxremote.access
-chown tomcat $TOMCAT_ETC/jmxremote.keystore
-chmod 640 $TOMCAT_ETC/jmxremote.keystore
+#chown tomcat $TOMCAT_ETC/jmxremote.keystore
+#chmod 640 $TOMCAT_ETC/jmxremote.keystore
 chown tomcat $TOMCAT_ETC/jmxremote.password
 chmod 600 $TOMCAT_ETC/jmxremote.password
 #chown tomcat $TOMCAT_ETC/myapp-config.groovy
