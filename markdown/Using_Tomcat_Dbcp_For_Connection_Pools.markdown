@@ -19,9 +19,9 @@ The steps will be:
 
 ## Collect materials
 
-1. Identify a list of jars which would be required by Tomcat to create and manage a database connection pool without your webapp running.  I'm using Postgres and Postgis, so my list is:
+1. Identify a list of jars which would be required by Tomcat to create and manage a database connection pool without your webapp running.  I'm using Postgres and Postgis, so my list is: 
 
-  postgresql-8.4-701.jdbc3.jar postgis-jdbc-1.5.2.jar postgis-jdbc-jts-1.1.6.jar
+    postgresql-8.4-701.jdbc3.jar postgis-jdbc-1.5.2.jar postgis-jdbc-jts-1.1.6.jar
 
 1. Acquire tomcat-dbcp.jar I found this distributed as part of Grails 1.3.7 Tomcat plugin:
 
