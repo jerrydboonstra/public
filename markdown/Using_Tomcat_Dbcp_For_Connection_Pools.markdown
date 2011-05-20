@@ -80,6 +80,7 @@ I have this block in my BuildConfig after the dependencies block.  It excludes t
 
 You'll want to redefine your production datasource to use the JNDI resource. 
 Update DataSource.groovy 
+
     production {
         dataSource {
             pooled = false
