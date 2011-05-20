@@ -21,9 +21,9 @@ The steps will be:
 
 1. Identify a list of jars which would be required by Tomcat to create and manage a database connection pool without your webapp running.  I'm using Postgres and Postgis, so my list is:
 
-    postgresql-8.4-701.jdbc3.jar
-    postgis-jdbc-1.5.2.jar
-    postgis-jdbc-jts-1.1.6.jar
+* postgresql-8.4-701.jdbc3.jar
+* postgis-jdbc-1.5.2.jar
+* postgis-jdbc-jts-1.1.6.jar
 
 1. Acquire tomcat-dbcp.jar I found this distributed as part of Grails 1.3.7 Tomcat plugin:
 
@@ -57,7 +57,7 @@ Mine looks like this.  The important part is the "Resource" element, which defin
 
 For reasons I won't get into here, any jars that were added to the Tomcat classpath cannot be duplicated in your webapp.  I'm assuming most Grails webapps will use non-JNDI datasources for development and testing, and only have Tomcat manage db connections when built with the 'production' environment.  Therefore the deployed war will need to exclude the database jars.
 
-1. Update BuildConfig.groovy
+### Update BuildConfig.groovy
 
 I have this block in my BuildConfig after the dependencies block.  It excludes the pool jars from my production war at Build time.
 
@@ -78,7 +78,7 @@ I have this block in my BuildConfig after the dependencies block.  It excludes t
         }
     }
 
-1. Use the right datasource
+### Use the right datasource
 
 You'll want to redefine your production datasource to use the JNDI resource. 
 Update DataSource.groovy 
